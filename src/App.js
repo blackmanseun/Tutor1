@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Component/Header'
-import Section from "./Component/Section";
+import Homepage from "./Pages/Homepage/Homepage.jsx";
 import Footer from "./Component/Footer";
 
 export default class App extends Component {
@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div>
         <Header/>
-        <Section/>
+        <Homepage/>
         <Footer/>
       </div>
     )
