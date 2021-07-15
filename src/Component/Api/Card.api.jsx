@@ -2,12 +2,14 @@ const CardsApi = [
     {
         id: 1,
         title: "Hats",
-        imgUrl: '/Images/1.jpg'
+        imgUrl: '/Images/1.jpg',
+        linkUrl: 'Hats'
     },
     {
         id: 2,
         title: "Shoes",
-        imgUrl: '/Images/2.jpg'
+        imgUrl: '/Images/2.jpg',
+        linkUrl: 'Shoes'
     },
     {
         id: 3,

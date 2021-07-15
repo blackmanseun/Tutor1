@@ -15,12 +15,10 @@ constructor(){
         return (
             <div className="section"> 
               {
-                  this.state.section.map(({id, imgUrl, title, size}) =>(
+                  this.state.section.map(({id, ...otherSectionProps}) =>(
                       <Card
-                      title ={title}
                       key ={id}
-                      imgUrl={imgUrl}
-                      size={size}
+                      {...otherSectionProps}
                       />
                   ))
               }  
