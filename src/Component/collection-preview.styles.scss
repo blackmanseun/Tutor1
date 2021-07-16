@@ -1,13 +1,13 @@
 .gridView{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
+    grid-gap: 2em;
 }
 .preview{
     // border: 1px solid black;
 }
 .collection{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .previewImg{
