@@ -1,0 +1,51 @@
+.gridView{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+.preview{
+    // border: 1px solid black;
+}
+.collection{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.previewImg{
+    height: 280px;
+    position: relative;
+    // border: 1px solid green;
+}
+.spanArea{
+    // border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+.hiddenArea{
+    background: rgba(255,255,255,0.35);
+    position: absolute;
+    inset: 0;
+    // height: 280px;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem;
+    display: none;
+    // border: 1px solid red;
+    button{
+        text-transform: uppercase;
+        padding: 15px 60px;
+        border: none;
+        background: rgba(255,255,255,0.35);
+    }
+    // border: 1px solid purple;
+}
+.previewImg:hover{
+    .hiddenArea{
+        display: flex;
+    }
+}
+button:hover{
+    background-color: black;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}

@@ -4,6 +4,7 @@ import Homepage from "./Pages/Homepage/Homepage.jsx";
 import Footer from "./Component/Footer";
 import { Switch, Route } from "react-router-dom";
 import ProductDetails from './Component/Directory/ProductDetails';
+import ShopPage from './Pages/ShopPage/ShopPage.component';
 
 export default class App extends Component {
   render() {
@@ -12,7 +13,8 @@ export default class App extends Component {
         <Header/>
         <Switch>
         <Route exact path='/' component={Homepage} />
-        <Route exact path='/:details' component={ProductDetails} />
+        <Route exact path='/Shop' component={ShopPage} />
+        <Route exact path='/:Details' component={ProductDetails} />
         </Switch>
         <Footer/>
       </div>

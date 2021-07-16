@@ -14,19 +14,22 @@ const CardsApi = [
     {
         id: 3,
         title: "Bags",
-        imgUrl: 'Images/3.jpg'
+        imgUrl: 'Images/3.jpg',
+        linkUrl: 'Bags'
     },
     {
         id: 4,
         title: "Shirts",
         imgUrl: '/Images/4.jpg',
-        size: 'large'
+        size: 'large',
+        linkUrl: 'Shirts'
     },
     {
         id: 5,
         title: "Watches",
         imgUrl: '/Images/5.jpg',
-        size: 'large'
+        size: 'large',
+        linkUrl: 'Watches'
     }
 ]
 export default CardsApi
