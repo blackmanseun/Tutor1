@@ -1,11 +1,12 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 import './collection-preview.styles.scss'
 
-const CollectionPreview = ({ title, items }) => (
-    <div className="collection">
-        <h1>{title.toUpperCase()}</h1>
-        <div className="gridView">
 
+const CollectionPreview = ({ title, items, history}) => (
+    <div className="collection">
+        <h1 className="shopTitle" onClick ={()=> history.push(`/category/${title}`)}>{title.toUpperCase()}</h1>
+        <div className="gridView">
             {
                 items.filter((item, idx) => idx < 4).map(({name, imgUrl, price}) => (
                     <div className="preview">
@@ -34,4 +35,4 @@ const CollectionPreview = ({ title, items }) => (
         </div>
     </div>
 )
-export default CollectionPreview
+export default withRouter(CollectionPreview)

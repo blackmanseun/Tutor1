@@ -2,9 +2,9 @@ import React from 'react'
 import './card.component.styles.scss'
 import { withRouter } from "react-router-dom";
 
-const Card = ({title, imgUrl, size, history, linkUrl, match}) => (
+const Card = ({title, id, imgUrl, size, history, match}) => (
     <div
-    className={`${size} inner`} onClick={()=> history.push(`${match.url}${linkUrl}`) }>
+    className={`${size} inner`} onClick={()=> history.push(`${match.url}category/${title}`) }>
         <div className="backgroundImg" style={{
         backgroundImage: `url(${imgUrl})`,
     }}

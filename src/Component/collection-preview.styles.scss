@@ -7,7 +7,7 @@
     // border: 1px solid black;
 }
 .collection{
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 .previewImg{
@@ -47,5 +47,8 @@ button:hover{
     background-color: black;
     color: white;
     opacity: 1;
+    cursor: pointer;
+}
+.shopTitle{
     cursor: pointer;
 }

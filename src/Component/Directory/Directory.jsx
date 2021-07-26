@@ -15,10 +15,10 @@ constructor(){
         return (
             <div className="section"> 
               {
-                  this.state.section.map(({id, ...otherSectionProps}) =>(
+                  this.state.section.map((item) =>(
                       <Card
-                      key ={id}
-                      {...otherSectionProps}
+                      key ={item.id}
+                      {...item}
                       />
                   ))
               }  
