@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Roboto+Condensed:wght@300&family=Style+Script&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+@mixin forms {
+    border: 0;
+    border-bottom: 1.5px solid gray;
+    margin-bottom: 60px;
+    width: 100%;
+    padding: .8rem 0;
+    transition: all .15s ease-in-out;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:focus, &:not(:placeholder-shown) {
+        outline: none;
+        border-color: #dd7544;
+        border-width: 2px;
+        
+        &+.form-input-label {
+            top: -10px;
+            font-size: 10px;
+            color: #dd7544;
+        }
+    }
+}
+
+.signInForm {
+    display: flex;
+    flex-direction: column;
+    margin: 20% 0;
+}
+
+.signInSection {
+    width: 30%;
+    padding: 50px;
+
+    h2 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    span {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 20px;
+    }
+
+}
+
+.group {
+    position: relative;
+
+    .form-input {
+        @include forms
+    }
+
+    .form-input-label {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 15px;
+        color: gray;
+        top: 10px;
+        left: 0;
+        transition: all .15s ease-in-out;
+    }
+}
+.sign-in-button{
+    padding: 15px 30px;
+    color: white;
+    background: black;
+    border-color: black;
+    &:hover{
+        color: #dd7544;
+        background: transparent;
+        border: 1px solid #dd7544;
+    }
+}

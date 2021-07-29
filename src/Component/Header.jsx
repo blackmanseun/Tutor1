@@ -11,7 +11,7 @@ const Header = () => (
             <div className="linkMenu">
             <Link to='/'>Home</Link>
             <Link to='/Shop'>Shop</Link>
-            <Link to='/Contact'>Contact</Link>
+            <Link to='/SignInOut'>Sign in</Link>
             </div>
     </div>
 ) 
