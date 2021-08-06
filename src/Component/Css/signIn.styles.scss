@@ -32,7 +32,7 @@
 }
 
 .signInSection {
-    width: 30%;
+    width: 35%;
     padding: 50px;
 
     h2 {
@@ -66,14 +66,6 @@
         transition: all .15s ease-in-out;
     }
 }
-.sign-in-button{
-    padding: 15px 30px;
-    color: white;
-    background: black;
-    border-color: black;
-    &:hover{
-        color: #dd7544;
-        background: transparent;
-        border: 1px solid #dd7544;
-    }
+.btnGroup{
+    display: flex;
 }

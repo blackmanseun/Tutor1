@@ -6,8 +6,27 @@ import { Switch, Route } from "react-router-dom";
 import ProductDetails from './Component/Directory/ProductDetails';
 import ShopPage from './Pages/ShopPage/ShopPage.component';
 import SignInOut from './Pages/SignInOut/signInOut';
+import {auth} from './Component/Firebase/Firebase.utils'
 
 export default class App extends Component {
+ constructor(){
+   super();
+   this.state={
+     currentUser: null
+   }
+ }
+ unsubscribeFromAuth = null
+
+ componentDidMount(){
+  this.unsubscribeFromAuth = auth.onAuthStateChanged(user=>{
+     this.setState({currentUser: user})
+   })
+ }
+ componentWillUnmount(){
+   this.unsubscribeFromAuth()
+ }
+
+
   render() {
     return (
       <div>

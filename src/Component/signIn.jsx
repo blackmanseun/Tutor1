@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Css/signIn.styles.scss'
+import CustomBtn from './Custom-button/customBtn';
 import FormInput from './FormInput/FormInput';
+import { signInWithGoogle } from "./Firebase/Firebase.utils";
 
 export default class SignIn extends Component {
     constructor(props){
@@ -46,10 +48,10 @@ export default class SignIn extends Component {
                 label = 'password'
                 required
                 />
-                    <div>
-                        <button className="sign-in-button" type="submit">Submit form</button>
-                        {/* <button className="sign-in-button google-button" type="submit">Submit form</button> */}
-
+                    <div className="btnGroup">
+                        <CustomBtn type="submit" > Submit</CustomBtn><br/>
+                        <CustomBtn onClick={signInWithGoogle} >Sign in with Google</CustomBtn>
+                        
                     </div>
                 </form>
             </div>
