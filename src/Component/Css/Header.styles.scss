@@ -1,24 +1,36 @@
-.headerContainer{
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px 0;
-    .logo img{
+
+    .logo img {
         height: 50px;
     }
-    .linkMenu{
+
+    .linkMenu {
         display: flex;
         gap: 2em;
-        a{
+
+        a {
             text-decoration: none;
             color: #000;
             text-transform: uppercase;
-            
-        &:hover{
-            color: rgb(221, 117, 68);
+
+            &:hover {
+                color: rgb(221, 117, 68);
+            }
         }
-        }
+    }
+}
+
+.options {
+    color: #000;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover{
+        color: rgb(221, 117, 68);
     }
 }
