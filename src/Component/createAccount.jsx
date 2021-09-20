@@ -19,7 +19,7 @@ export default class CreateAccount extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert("Passwords don't match");
       return;
     }
@@ -56,7 +56,7 @@ export default class CreateAccount extends Component {
       <div className="signUpSection">
         <h2>I don't have an acoount</h2>
         <span>Sign up with email and password</span>
-        <form className="signUpForm">
+        <form className="signUpForm" onSubmit={this.handleSubmit}>
           <FormInput
             name="displayName"
             type="text"

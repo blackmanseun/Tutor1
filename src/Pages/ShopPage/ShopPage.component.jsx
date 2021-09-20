@@ -14,11 +14,11 @@ export default class ShopPage extends Component {
         return (
             <div>
                 {
-                    this.state.ShopData.map(({id,...otherPreviewProps})=>(
+                    this.state.ShopData.map(item =>(
 
                         <CollectionPreview
-                         key={id} 
-                         {...otherPreviewProps}/>
+                         key={item.id} 
+                         item ={item} />
 
                     ))
                 }

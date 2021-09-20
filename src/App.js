@@ -3,7 +3,7 @@ import Header from "./Component/Header";
 import Homepage from "./Pages/Homepage/Homepage.jsx";
 import Footer from "./Component/Footer";
 import { Switch, Route } from "react-router-dom";
-import ProductDetails from "./Component/Directory/ProductDetails";
+import ProductDetails from "./Component/Products/ProductDetails";
 import ShopPage from "./Pages/ShopPage/ShopPage.component";
 import SignInOut from "./Pages/SignInOut/signInOut";
 import {
@@ -32,6 +32,7 @@ export default class App extends Component {
               ...snapShot.data()
             }
           })
+          console.log(this.state.currentUser)
         })
       }
       this.setState({ currentUser: userAuth })

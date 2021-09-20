@@ -18,7 +18,7 @@ constructor(){
                   this.state.section.map((item) =>(
                       <Card
                       key ={item.id}
-                      {...item}
+                      item = {item}
                       />
                   ))
               }  
