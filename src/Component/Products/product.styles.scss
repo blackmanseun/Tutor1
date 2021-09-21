@@ -1,4 +1,10 @@
 .products{
-    max-width: 1300px;
-    margin: auto;
+   width: 400px;
+   margin: 25px 0px;
+   span{
+       cursor: pointer;
+       &:hover{
+           color: #dd7544;
+       }
+   }
 }

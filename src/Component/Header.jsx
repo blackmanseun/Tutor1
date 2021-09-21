@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './Css/Header.styles.scss'
 import { auth } from './Firebase/Firebase.utils';
+import { connect } from 'react-redux'
 
 const Header = ({currentUser}) => (
     <div className="headerContainer">
@@ -25,5 +26,8 @@ const Header = ({currentUser}) => (
             </div>
     </div>
 ) 
+const mapStateToProps = state =>({
+    currentUser: state.user.currentUser
+})
 
-export default Header
+export default connect(mapStateToProps)(Header)
