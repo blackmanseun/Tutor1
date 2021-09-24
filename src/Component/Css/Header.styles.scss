@@ -5,6 +5,7 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px 0;
+    position: relative;
 
     .logo img {
         height: 50px;
@@ -33,4 +34,21 @@
     &:hover{
         color: rgb(221, 117, 68);
     }
+}
+
+.dropdown{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    transform: translateY(-10px);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 300ms ease-in-out ;
+    &.show{
+        // border: 2px solid red;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: initial;
+      }
 }

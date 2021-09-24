@@ -1,0 +1,22 @@
+.cartIcon{
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        color: #dd7544;
+    }
+    span{
+        position: absolute;
+        top: -13px;
+        right: -15px;
+        background: #dd7544;
+        border-radius: 50%;
+        width: 20px;
+        text-align: center;
+        font-size: 12px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+}
