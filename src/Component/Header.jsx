@@ -1,13 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Css/Header.styles.scss";
 import { auth } from "./Firebase/Firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "./cart-icon/CartIcon";
 import CartDropdown from "./cart-dropdown/cart-dropdown.component";
+import { toggleCart } from "./Redux/Cart/cart.actions";
 
-const Header = ({ currentUser }) => {
-  const [showCart, setShowCart] = useState(false);
+const Header = ({ currentUser, cart, toggleCart }) => {
   return (
     <div className="headerContainer">
       <Link to="/">
@@ -29,12 +29,12 @@ const Header = ({ currentUser }) => {
           </Link>
         )}
         <div
-          onClick={() => setShowCart((v) => !v)}
+          onClick={() => toggleCart()}
           className="dropdown-trigger"
         >
           <CartIcon />
         </div>
-        <div className={`dropdown ${showCart?'show': ''}`}>
+        <div className={`dropdown ${cart.visible?'show': ''}`}>
           <CartDropdown />
         </div>
       </div>
@@ -43,6 +43,10 @@ const Header = ({ currentUser }) => {
 };
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  cart: state.cart
 });
+const mapDispatchToProps = (dispatch) => ({
+  toggleCart: () => dispatch(toggleCart()),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
-export default connect(mapStateToProps)(Header);

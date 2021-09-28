@@ -1,10 +1,11 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { connect } from 'react-redux'
 
 import "./cartIcon.styles.scss";
 
-const CartIcon = () => {
-  let number = 4;
+const CartIcon = ({cart}) => {
+  let number = cart.cartItems.length;
   return (
     <div className="cartIcon">
       <AiOutlineShoppingCart size={20} />
@@ -14,5 +15,8 @@ const CartIcon = () => {
     </div>
   );
 };
+const mapStateToProps = ({cart}) =>({
+  cart
+})
 
-export default CartIcon;
+export default connect(mapStateToProps)(CartIcon);

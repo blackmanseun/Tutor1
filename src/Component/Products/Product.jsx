@@ -1,8 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router";
 import './product.styles.scss'
+import { connect } from "react-redux"
+import { addItem } from "../Redux/Cart/cart.actions";
 
-const Product = ({ product }) => (
+const Product = ({ product, addItem }) => (
  <div className="products">
       <div className="flexView">
     <div key={product.id} className="preview">
@@ -13,7 +15,9 @@ const Product = ({ product }) => (
         className="previewImg"
       >
         <div className="hiddenArea">
-          <button>Add to cart</button>
+          <button onClick={()=>{
+            return addItem(product)
+          }}>Add to cart</button>
         </div>
       </div>
       <div className="spanArea">
@@ -24,4 +28,8 @@ const Product = ({ product }) => (
   </div>
  </div>
 );
-export default withRouter(Product);
+const mapDispatchToProps =(dispatch) =>({
+  addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null, mapDispatchToProps )(withRouter(Product));

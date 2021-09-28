@@ -4,8 +4,7 @@ import ShopData from '../Api/ShopData';
 import Product from './Product';
 import './productDetails.styles.scss'
 
-
-export default function ProductDetails({history}) {
+ function ProductDetails({history}) {
     const  { id } = useParams();
     const category = ShopData.find( cat =>{
         return `${cat.id}` === id
@@ -25,3 +24,4 @@ export default function ProductDetails({history}) {
         </div>
     )
 }
+export default ProductDetails
