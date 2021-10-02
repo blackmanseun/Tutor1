@@ -1,28 +1,20 @@
-import React, { Component } from 'react'
-import CardsApi from '../Api/Card.api.jsx'
+import React from 'react'
+import ShopData from '../Api/ShopData.jsx';
 import Card from '../Cards/Card.jsx'
 
 
-export default class Directory extends Component {
-constructor(){
-    super();
-    this.state ={
-        section: CardsApi
-    }
+const Directory = () => {
+    return (
+        <div className="section"> 
+          {
+              ShopData.map((item) =>(
+                  <Card
+                  key ={item.id}
+                  item = {item}
+                  />
+              ))
+          }  
+        </div>
+    )
 }
-
-    render() {
-        return (
-            <div className="section"> 
-              {
-                  this.state.section.map((item) =>(
-                      <Card
-                      key ={item.id}
-                      item = {item}
-                      />
-                  ))
-              }  
-            </div>
-        )
-    }
-}
+export default Directory

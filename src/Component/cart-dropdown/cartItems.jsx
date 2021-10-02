@@ -2,11 +2,11 @@ import React from "react";
 import './cartItems.styles.scss'
 import { AiFillCloseCircle } from 'react-icons/ai'
 const CartItems = ({item}) =>{
-    let quantity = 3;
+    let quantity = item.quantity;
     return (
         <div className="cart">
             <div className="cart-image">
-                <img src={item.imgUrl} alt="image" />
+                <img src={item.imgUrl} alt="item" />
             </div>
             <div className="cart-details">
                 <h3>

@@ -19,3 +19,11 @@
         border: #357ae8;
     }
 }
+.inverted{
+    color: black;
+    background-color: #ffffff;
+    &:hover{
+        color: white;
+        background: black;
+    }
+}

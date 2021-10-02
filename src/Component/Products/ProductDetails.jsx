@@ -11,7 +11,9 @@ import './productDetails.styles.scss'
     })
     // console.log(category)
     return (
-        <div className="productItems">
+        <div className="product-wrap">
+        <h1>{category.title.toUpperCase()}</h1>
+            <div className="productItems">
             {
                 category.items.map(i =>(
                     <Product
@@ -21,6 +23,7 @@ import './productDetails.styles.scss'
                 ))
             }
             
+        </div>
         </div>
     )
 }

@@ -1,7 +1,12 @@
-.productItems{
-    display: flex;
+.product-wrap {
     max-width: 1300px;
     margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+
+
+    .productItems {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
