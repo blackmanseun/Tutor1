@@ -1,4 +1,4 @@
-.customBtn{
+.customBtn {
     padding: 15px 30px;
     color: white;
     background: black;
@@ -6,24 +6,29 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0 10px;
-    &.block{
-    width: 100%;
-    margin: 0;
+
+    &.block {
+        width: 100%;
+        margin: 0;
     }
 }
-.blue{
+
+.blue {
     background-color: #4285f4;
     border: #4285f4;
-    &:hover{
+
+    &:hover {
         background-color: #357ae8;
         border: #357ae8;
     }
 }
-.inverted{
-    color: black;
-    background-color: #ffffff;
-    &:hover{
-        color: white;
-        background: black;
+
+.inverted {
+    color: white;
+    background: black;
+
+    &:hover {
+        color: black;
+        background-color: #ffffff;
     }
 }

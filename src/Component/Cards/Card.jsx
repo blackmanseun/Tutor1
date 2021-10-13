@@ -4,7 +4,6 @@ import './card.component.styles.scss'
 
 const Card = ({item, match}) => {
     const history = useHistory()
-    console.log(history)
     return (
         <div
             className={`${item?.size} inner`} onClick={() => history.push(`/category/${item.id}`)}>

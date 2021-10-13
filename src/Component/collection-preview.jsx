@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addItem } from "./Redux/Cart/cart.actions";
+import { addItem, total } from "./Redux/Cart/cart.actions";
 import "./collection-preview.styles.scss";
 import { useHistory } from "react-router";
 
 
-const CollectionPreview = ({ item, addItem }) => {
+const CollectionPreview = ({ item, addItem, total }) => {
     console.log(item)
     const history = useHistory()
     return (
@@ -31,7 +31,8 @@ const CollectionPreview = ({ item, addItem }) => {
                                     <div className="hiddenArea">
                                         <button
                                             onClick={() => {
-                                                return addItem(item);
+                                                addItem(item);
+                                                total(item);
                                             } }
                                         >
                                             Add to cart
@@ -51,5 +52,6 @@ const CollectionPreview = ({ item, addItem }) => {
 };
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
+  total: (item) => dispatch(total(item))
 });
 export default connect(null, mapDispatchToProps)(CollectionPreview);

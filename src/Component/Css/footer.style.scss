@@ -1,0 +1,14 @@
+.footer{
+    margin: 40px auto 0 ;
+    background: black;
+    color: white;
+    padding: 1.5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+}
